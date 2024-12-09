@@ -1,0 +1,123 @@
+.header {
+  background-color: $c-green;
+  padding-top: px-to-rem(17px);
+  padding-bottom: px-to-rem(40px);
+  @media (min-width:1020px) {
+    padding-top: px-to-rem(35px);
+    padding-bottom: px-to-rem(42px);
+  }
+}
+
+//navbar container
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $c-green;
+}
+
+.nav {
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: px-to-rem(30px);
+  }
+  &-link {
+    color: $c-white;
+    font-size: px-to-rem(20px);
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+
+//hamburger box
+.hamburger {
+  width: px-to-rem(35px);
+  height: px-to-rem(35px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  &-line {
+    width: px-to-rem(24px);
+    height: px-to-rem(2.5px);
+    background: $c-white;
+    border-radius: px-to-rem(3px);
+    position: absolute;
+  }
+  &-line:nth-child(1) {
+    transform: translateY(px-to-rem(10px));
+  }
+  &-line:nth-child(3) {
+    transform: translateY(px-to-rem(-10px));
+  }
+}
+
+//hamburger and nav visibility
+.hide-for-desktop {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+//logo article
+.logo {
+  display: flex;
+  align-items: center;
+  &-img {
+    @media (max-width: 1020px) {
+      width: px-to-rem(45px);
+      height: px-to-rem(31px);
+    }
+  }
+  &-text {
+    color: $c-white;
+    font-size: px-to-rem(30px);
+    font-weight: normal;
+    margin-left: px-to-rem(10px);
+  }
+}
+
+//hero section
+.hero {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    .hero-content{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+    .hero-img{
+        grid-column: 2/3;
+    }
+  }
+  margin-block: px-to-rem(40px);
+  text-align: center;
+  &-img {
+    margin-bottom: px-to-rem(30px);
+  }
+  &-content {
+    text-align: start;
+    color: $c-white;
+  }
+  &-content > h4 {
+    color: $c-white;
+  }
+  &-content > small {
+    color: opacify($c-white, 0.75);
+  }
+  &-btn {
+    background-color: $c-white;
+    color: $c-black;
+    margin-top: px-to-rem(9px);
+  }
+}

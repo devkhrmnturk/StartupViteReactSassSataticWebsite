@@ -1,0 +1,54 @@
+//reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+//variables
+$f-work-sans: "Work Sans", serif;
+$f-crimson-text: "Crimson Text", serif;
+
+$c-green: #74c69d;
+$c-black: #212529;
+$c-white: #ffffff;
+
+//functions
+$base-font-size: 16px;
+@function px-to-rem($px) {
+  @return $px / $base-font-size * 1rem;
+}
+//general
+body {
+  font-family: $f-work-sans;
+  line-height: 1.25;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  width: fit-content;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.br {
+  border: 1px solid red;
+}
+
+.wrapper{
+  width: min(px-to-rem(1175px), 100% - px-to-rem(40px));
+  margin-inline: auto;
+}
+
+.mb{
+  margin-bottom: px-to-rem(60px);
+  @media (min-width:1024px) {
+    margin-bottom: px-to-rem(73px);
+  }
+}

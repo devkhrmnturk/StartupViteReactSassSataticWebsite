@@ -1,0 +1,121 @@
+.main {
+  padding-top: px-to-rem(22px);
+  padding-bottom: px-to-rem(39px);
+}
+
+//partners section
+.partners .content-box {
+  text-align: center;
+}
+
+.partners small,
+.team small {
+  font-size: px-to-rem(20px);
+  color: $c-black;
+}
+
+.partners {
+  overflow: hidden;
+  text-align: center;
+  &-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-to-rem(40px);
+    margin-block: px-to-rem(55px);
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: px-to-rem(68px);
+      justify-content: center;
+    }
+  }
+}
+
+//other sections
+
+.section {
+  text-align: center;
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-img {
+    margin-bottom: px-to-rem(30px);
+  }
+  &-content {
+    margin: auto;
+  }
+  &-grid {
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: space-between;
+      .section-img {
+        grid-column: 2/3;
+      }
+
+      .content-box {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+    }
+  }
+}
+
+//teams section
+
+.team .content-box {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teams {
+  margin-top: px-to-rem(41px);
+  margin-bottom: px-to-rem(44px);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(35px);
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  &-card {
+    border-radius: px-to-rem(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    $color-opacify: opacify($c-black, 0.5);
+    box-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(4px) $color-opacify;
+    padding-inline: px-to-rem(38px);
+    max-width: px-to-rem(279px);
+    height: px-to-rem(299px);
+    &-img {
+      margin-bottom: px-to-rem(19px);
+    }
+    &-content-title {
+      font-size: px-to-rem(24px);
+      font-weight: bold;
+      font-family: $f-crimson-text;
+      margin-bottom: px-to-rem(17px);
+    }
+  }
+}
+
+.teams-card small {
+  font-size: px-to-rem(15px);
+  font-weight: normal;
+  color: opacify($c-black, 0.25);
+  text-transform: uppercase;
+}
