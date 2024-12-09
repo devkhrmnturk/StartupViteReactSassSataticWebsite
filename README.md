@@ -5,4 +5,4 @@ https://www.figma.com/community/file/1150370769219258177
 https://devkhrmnturk.github.io/StartupViteReactSassSataticWebsite/
 
 
-Vite + React + Sass kullanarak geliştirdiğim static react projesi.
+Vite + React + Sass kullanılarak figma tasarımındaki anasayfa tasarımını canlandıran static react projesi.
